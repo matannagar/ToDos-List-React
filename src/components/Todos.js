@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TodosList = ({ todos, setTodos }) => {
+const Todos = ({ todos, setTodos }) => {
 
     const handleComplete = (todo) => {
         setTodos(
@@ -43,4 +43,4 @@ const TodosList = ({ todos, setTodos }) => {
     )
 }
 
-export default TodosList
+export default Todos

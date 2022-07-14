@@ -1,13 +1,17 @@
 import './App.css';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Headline from './components/Headline'
 import Form from './components/Form';
-import TodosList from "./components/TodosList"
+import Todos from "./components/Todos"
 
 const App = () => {
+  const loadState = JSON.parse(localStorage.getItem("todos")) || [];
   const [input, setInput] = useState("")
-  const [todos, setTodos] = useState([])
+  const [todos, setTodos] = useState(loadState)
 
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   return (
     <div className="app">
@@ -24,7 +28,7 @@ const App = () => {
           />
         </div>
         <div>
-          <TodosList todos={todos} setTodos={setTodos} />
+          <Todos todos={todos} setTodos={setTodos} />
         </div>
       </div>
     </div>
