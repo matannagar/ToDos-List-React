@@ -1,19 +1,19 @@
 import './App.css';
 import React, { useState } from "react";
-import Header from './components/Headline'
+import Headline from './components/Headline'
 import Form from './components/Form';
 import TodosList from "./components/TodosList"
 
 const App = () => {
   const [input, setInput] = useState("")
   const [todos, setTodos] = useState([])
-  const [editTodo, setEditTodo] = useState(null);
+
 
   return (
-    <div className="container">
+    <div className="app">
       <div className="app-wrapper">
         <div>
-          <Header />
+          <Headline />
         </div>
         <div>
           <Form
@@ -21,12 +21,10 @@ const App = () => {
             setInput={setInput}
             todos={todos}
             setTodos={setTodos}
-            editTodo={editTodo}
-            setEditTodo={setEditTodo}
           />
         </div>
         <div>
-          <TodosList todos={todos} setTodos={setTodos} setEditTodo={setEditTodo} />
+          <TodosList todos={todos} setTodos={setTodos} />
         </div>
       </div>
     </div>

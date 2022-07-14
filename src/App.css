@@ -3,8 +3,7 @@
   padding: 0;
 }
 
-.container {
-  background: linear-gradient(to right bottom, #e1b382 #c89666);
+.app {
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -35,7 +34,6 @@
     padding: 15px;
     margin-right: 25px;
     font-size: 20px;
-    color: rgb(255, 255, 255);
     background-color: #b56876 ;
     border: 1px solid #fdfdfd ;
     border-radius: 10px;
@@ -60,8 +58,7 @@
   }
 
   .button-complete,
-  .button-delete,
-  .button-edit{
+  .button-delete{
     border: none;
     outline: none;
     cursor: pointer;
@@ -71,23 +68,19 @@
   }
 
 .button-complete{
-  color: #ff6c6c;
+  color: #ff0000;
   margin-right: 10px;
 }
 
-.button-edit{
-  color: #e2d029;
-  margin-right: 10px;
-}
 .button-delete{
-  color: lightgreen;
+  color: rgb(255, 255, 255);
 }
 
 .complete{
   text-decoration-style: solid;
   text-decoration-line: line-through;
-  text-decoration-color: #ff6c6c;
-  opacity: 0.6;
+  text-decoration-color: #b56876 ;
+  opacity: 0.5;
 }
 
 .list{
