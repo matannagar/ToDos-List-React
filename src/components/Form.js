@@ -1,4 +1,5 @@
 import React from 'react'
+import { v4 as uuidv4 } from "uuid";
 
 const Form = ({ input, setInput, todos, setTodos }) => {
 
@@ -10,6 +11,9 @@ const Form = ({ input, setInput, todos, setTodos }) => {
     //default action that belongs to the event will not occur
     const onFormSubmit = (event) => {
         event.preventDefault();
+        setTodos([...todos, { id: uuidv4(), title: input, completed: false }])
+        //resets todo in bar
+        setInput("");
     }
 
     return (
