@@ -45,4 +45,16 @@
     width: 70px;
     padding: 15px 15px;
     font-size: 20px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #f1af71;
+  }
+
+  .list-item{
+    display: flex;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    max-height: 30px;
   }
