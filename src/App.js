@@ -1,18 +1,13 @@
 import './App.css';
 import React, { useState, useEffect } from "react";
-import Todos from "./components/Todos"
 import Headline from './components/Headline'
 import Form from './components/Form';
+import Todos from "./components/Todos"
 
 const App = () => {
-
-  const loadState = JSON.parse(localStorage.getItem("todos")) || [];
   const [input, setInput] = useState("")
-  const [todos, setTodos] = useState(loadState)
+  const [todos, setTodos] = useState([])
 
-  useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos));
-  }, [todos]);
 
   return (
     <div className="app">
