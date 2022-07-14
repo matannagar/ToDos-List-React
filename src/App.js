@@ -1,9 +1,27 @@
 import './App.css';
+import React, { useState } from "react";
+import Header from './components/Header'
+import Form from './components/Form'
 
-function App() {
+const App = () => {
+  const [input, setInput] = useState("")
+  const [todos, setTodos] = useState([])
+
   return (
-    <div>
-      App
+    <div className="container">
+      <div className="app-wrapper">
+        <div>
+          <Header />
+        </div>
+        <div>
+          <Form
+            input={input}
+            setInput={setInput}
+            todos={todos}
+            setTodos={setTodos}
+          />
+        </div>
+      </div>
     </div>
   );
 }
