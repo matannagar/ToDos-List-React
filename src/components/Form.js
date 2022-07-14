@@ -5,8 +5,11 @@ const Form = ({ input, setInput, todos, setTodos, editTodo, setEditTodo }) => {
 
     const updateTodo = (title, id, completed) => {
         const newTodo = todos.map((todo) =>
-            todo.id === id ? { title, id, completed } : todo)
-    }
+            todo.id === id ? { title, id, completed } : todo
+        );
+        setTodos(newTodo);
+        setEditTodo("");
+    };
     //event listener registering what is written inside the input bar to the app.js state
     const onInputChange = (event) => {
         setInput(event.target.value)
