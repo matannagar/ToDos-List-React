@@ -4,7 +4,7 @@ const Headline = () => {
     return (
         <div className=" header">
             <h1>Todos List</h1>
-            <h3>Created for NovelStat</h3>
+            <h3>Created for Novelsat</h3>
         </div>
     )
 }
